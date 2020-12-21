@@ -26,11 +26,15 @@ class dog(animal):
 
 
 class cat(animal):
-    pass
+    def __init__(self,name,age,color):
+        super().__init__(name,age,color)
+        self.haircut=None
+        self.caneatalone=None
+    @property
+    def haircut(self,YesOrNo):
+        self.haircut=YesOrNo
+    @property
+    def caneatalone(self,YesOrNo):
+        self.caneatalone=YesOrNo
+    
 
-firstdog=dog('jack',13,'white')
-firstdog.introduce()
-firstdog.setbreed('german')
-firstdog.changename('loly')
-firstdog.introduce()
-print(firstdog.breed)
